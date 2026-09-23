@@ -38,6 +38,7 @@ An enterprise-grade **Pharmacovigilance (PV) Intake & Regulatory Processing Simu
 
 ## 🛠️ Architecture & Tech Stack
 
+```text
 +-----------------------------------------------------------------------+
 |                        Streamlit UI Layer                             |
 |           (Multimodal Text & Image Input Intake Dashboard)            |
@@ -52,7 +53,7 @@ An enterprise-grade **Pharmacovigilance (PV) Intake & Regulatory Processing Simu
                                     v
 +-----------------------------------------------------------------------+
 |                       Google GenAI API Engine                         |
-|   (gemini-3.6-flash + Pydantic Schema Enforcement for Structured JSON) |
+|   (gemini-3.6-flash + Pydantic Schema Enforcement for Structured JSON)  |
 +-----------------------------------+-----------------------------------+
                                     |
                                     v
@@ -61,18 +62,10 @@ An enterprise-grade **Pharmacovigilance (PV) Intake & Regulatory Processing Simu
 |  (Day 0 Triage | ICH Seriousness | MedDRA/WHO-DD | Safety Narrative)  |
 +-----------------------------------------------------------------------+
 
-* **Frontend:** Streamlit
-* **AI Engine:** Google GenAI SDK (`gemini-3.6-flash`)
-* **Validation:** Pydantic v2
-* * **Secrets Management:** Native Streamlit Cloud Secrets (Zero key exposure)
+Frontend: Streamlit
 
----
+AI Engine: Google GenAI SDK (google-genai using gemini-3.6-flash)
 
-## 🚀 Local Installation & Quickstart
+Validation: Pydantic v2 for strict JSON output structure
 
-To run this application locally on your machine:
-
-### 1. Clone the Repository
-```bash
-git clone [https://github.com/AkarshSharma14/pv-icsr-agent.git](https://github.com/AkarshSharma14/pv-icsr-agent.git)
-cd pv-icsr-agent
+Secrets Management: Native Streamlit Cloud Secrets (Zero key exposure)
