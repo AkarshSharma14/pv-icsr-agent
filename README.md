@@ -69,3 +69,47 @@ AI Engine: Google GenAI SDK (google-genai using gemini-3.6-flash)
 Validation: Pydantic v2 for strict JSON output structure
 
 Secrets Management: Native Streamlit Cloud Secrets (Zero key exposure)
+
+
+---
+
+## 🚀 Local Installation & Quickstart
+
+To run this application locally on your machine:
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/AkarshSharma14/pv-icsr-agent.git
+cd pv-icsr-agent
+```
+### 2. Set Up Virtual Environment & Install Dependencies
+```bash
+
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+###3. Configure API Credentials
+Create a .env file in the root directory and add your Google Gemini API key:
+```
+GEMINI_API_KEY=your_actual_gemini_api_key_here
+```
+### 4. Run the Streamlit App
+```bash
+streamlit run app.py
+```
+
+---
+
+## 🔒 Security & Compliance
+
+* **No Secret Exposure:** Credentials are strictly managed via environment variables (`.env`) locally and encrypted secrets management on Streamlit Community Cloud. `.env`, virtual environments (`.venv/`), and IDE configurations (`.idea/`) are excluded via `.gitignore`.
+* **Privacy Assurance:** Designed for processing anonymized/de-identified sample data in compliance with patient privacy considerations (HIPAA / GDPR).
+
+---
+
+## 📬 Contact & Portfolio
+* **Author:** Akarsh Sharma
+* **GitHub:** [@AkarshSharma14](https://github.com/AkarshSharma14)
+* **Live App:** [PV AI Agent on Streamlit Cloud](https://pv-icsr-agent-sm7qwrvzuisectgysx77k.streamlit.app)
